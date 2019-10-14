@@ -17,8 +17,4 @@ class Loglint < Formula
       system "make"
     end
   end
-
-  test do
-    system "make", "test"
-  end
 end
