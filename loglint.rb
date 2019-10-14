@@ -1,8 +1,8 @@
 class Loglint < Formula
   desc "linter by analyzing build log"
   homepage "https://github.com/mattak/loglint"
-  url "https://github.com/mattak/loglint/archive/v0.1.0.tar.gz"
-  sha256 "e582e837948ae2f2a9f20d487acd88d4e4b01a50281c1789d93bda26cfad3477"
+  url "https://github.com/mattak/loglint/archive/v0.1.1.tar.gz"
+  sha256 "dd8be0cb32ec1247f1c50f5e9f4526267bd6cb0d73ecdc06d167b00c0a24a553"
 
   depends_on "go" => :build
   depends_on "make" => :build
