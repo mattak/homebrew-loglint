@@ -6,7 +6,6 @@ class Loglint < Formula
 
   depends_on "go" => :build
   depends_on "make" => :build
-  depends_on "dep" => :build
 
   def install
     print buildpath
@@ -15,7 +14,7 @@ class Loglint < Formula
     loglint_path.install buildpath.children
 
     cd loglint_path do
-      system "dep", "ensure", "-vendor-only"
+      system "go", "get"
       system "go", "build"
       bin.install "loglint"
     end
