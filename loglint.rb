@@ -5,21 +5,21 @@
 class Loglint < Formula
   desc "Linter by analyzing build log."
   homepage "https://github.com/mattak/unityguid"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mattak/loglint/releases/download/v1.0.0/loglint_darwin_x86_64.tar.gz"
-      sha256 "a80fd816fefeb27c244e5d37a340658d5bacb971863c3490c1b039f345764f35"
+    if Hardware::CPU.arm?
+      url "https://github.com/mattak/loglint/releases/download/v1.0.1/loglint_darwin_arm64.tar.gz"
+      sha256 "548aeab4776af16a0f25e7b92982725ca3dbe63a75ad6fab44da67da5bfeff55"
 
       def install
         bin.install "loglint"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/mattak/loglint/releases/download/v1.0.0/loglint_darwin_arm64.tar.gz"
-      sha256 "4dd8dc986b3e78c11c446d4d4141febd22aa9c8f62d27ffb00307ffe2d7a4a6c"
+    if Hardware::CPU.intel?
+      url "https://github.com/mattak/loglint/releases/download/v1.0.1/loglint_darwin_x86_64.tar.gz"
+      sha256 "9d87bec42f4cda1ecf09ce5c594e694b0353a421c86e16d6b17b4d7bcd008840"
 
       def install
         bin.install "loglint"
@@ -29,16 +29,16 @@ class Loglint < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mattak/loglint/releases/download/v1.0.0/loglint_linux_arm64.tar.gz"
-      sha256 "643364f4667fb5fac3f512530fedbde0ef07227949df872eb3c337930ced600f"
+      url "https://github.com/mattak/loglint/releases/download/v1.0.1/loglint_linux_arm64.tar.gz"
+      sha256 "836d8a06f910ceab6c942159325fb37320d46550bcb334ece79ae611ca4ba39a"
 
       def install
         bin.install "loglint"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mattak/loglint/releases/download/v1.0.0/loglint_linux_x86_64.tar.gz"
-      sha256 "4f6aed258e0e7b3d0f1400c6416d9a110ebe84fa56fcf1b3174aee809502d0da"
+      url "https://github.com/mattak/loglint/releases/download/v1.0.1/loglint_linux_x86_64.tar.gz"
+      sha256 "67a6f991513060713b18c7c8cbb5476b6ab6f9f489dca4baac0bd604a99eba65"
 
       def install
         bin.install "loglint"
